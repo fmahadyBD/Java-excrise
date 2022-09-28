@@ -1,0 +1,31 @@
+//Multilevel inheritance
+
+class a{
+    public void aa(){
+        System.out.println("This is a\n");
+    }
+}
+// extwnds class in a class
+class b extends a{
+    public void bb(){
+        System.out.println("This is b\n");
+    }
+}
+class c extends b{
+    public void cc(){
+        System.out.println("This is c");
+    }
+}
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Mian method!\n");
+        // in here we make an object for calling method;
+        //we extends class a in  class b
+        // new need make object for calling method
+        c s=new c();
+        s.aa();
+        //we call method by using object
+        s.bb();
+        s.cc();
+    }
+}
